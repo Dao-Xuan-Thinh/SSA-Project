@@ -119,3 +119,37 @@ button {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+/*Cho các label một dòng riêng*/
+label {
+  display: block;
+  margin: 8px 0;
+}
+
+.topHeader{
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.pageLayout{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* dính với view doesn't work lmao*/
+.stickyBox{
+  position: sticky;
+  top: 20px;
+}
+
+/* cho điện thoại */
+@media (max-width: 900px){
+  .pageLayout{
+    grid-template-columns: 1fr;
+  }
+  .stickyBox{
+    position: static;
+  }
+}

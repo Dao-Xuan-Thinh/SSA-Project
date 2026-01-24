@@ -10,9 +10,19 @@
 <h1>Bạn đang phân vân về điều gì?</h1>
 
 <div class="grid">
-  <button onclick="location.href='quiz.html'">
+  <button onclick="startQuiz()">
     Chọn chuyên ngành hẹp phù hợp
   </button>
+
+  <!-- redirect đến trang quiz.html theo ngành -->
+  <script>
+  function startQuiz(){
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+
+    window.location.href = "quiz.html?subject=" + subject;
+  }
+</script>
 
   <button onclick="location.href='career.html'">
     Cơ hội nghề nghiệp

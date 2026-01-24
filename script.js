@@ -30,10 +30,10 @@ window.addEventListener("DOMContentLoaded", () => {
   }, 1500); // thời gian hiển thị logo, 1500s là ổn
 });
 
-
-function goNext() {
-  location.href = "question.html";
-}
+//redirect đến cùng một trang question nhưng sẽ có value riêng
+function goQuestion(subject){
+    window.location.href = "question.html?subject=" + subject;
+  }
 
 function showToast() {
   const toast = document.getElementById("toast");
