@@ -1,15 +1,177 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <title>Quiz định hướng</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz định hướng IT</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<h1>Quiz tìm chuyên ngành hẹp phù hợp</h1>
+  <div class="container">
 
-<p>(Quiz sẽ được xây dựng ở đây)</p>
+    <div class="topHeader">
+      <h1 id="quizTitle">Quiz tìm chuyên ngành hẹp phù hợp (CNTT)</h1>
+    </div>
 
+    <div class="pageLayout">
+
+      <div class="leftCol">
+        <form id="quizForm">
+
+          <!-- câu hỏi 1 -->
+          <div class="qbox">
+            <h3>1) Bạn thích kiểu học nào hơn?</h3>
+            <label><input type="radio" name="q1" value="se,ai"> Thực hành + làm project</label>
+            <label><input type="radio" name="q1" value="ai,sec"> Lý thuyết + nghiên cứu</label>
+            <label><input type="radio" name="q1" value="it,net"> Kết hợp cả hai</label>
+          </div>
+
+          <!-- câu hỏi 2 -->
+          <div class="qbox">
+            <h3>2) Bạn thích giải quyết vấn đề kiểu nào?</h3>
+            <label><input type="radio" name="q2" value="se"> Xây hệ thống/app từ đầu đến cuối</label>
+            <label><input type="radio" name="q2" value="ai"> Phân tích dữ liệu để ra quyết định</label>
+            <label><input type="radio" name="q2" value="sec"> Tìm lỗi và lỗ hổng để vá</label>
+          </div>
+
+          <!-- câu hỏi 3 -->
+          <div class="qbox">
+            <h3>3) Bạn thích công việc nào hơn?</h3>
+            <label><input type="radio" name="q3" value="se"> Lập trình web/app</label>
+            <label><input type="radio" name="q3" value="ai"> Machine Learning / AI</label>
+            <label><input type="radio" name="q3" value="net"> Mạng / hệ thống / server</label>
+          </div>
+
+          <!-- câu hỏi 4 -->
+          <div class="qbox">
+            <h3>4) Bạn có thích làm việc với dữ liệu, số liệu không?</h3>
+            <label><input type="radio" name="q4" value="ai"> Rất thích</label>
+            <label><input type="radio" name="q4" value="it"> Bình thường</label>
+            <label><input type="radio" name="q4" value="se"> Không thích lắm</label>
+          </div>
+
+          <!-- câu hỏi 5 -->
+          <div class="qbox">
+            <h3>5) Bạn thấy hứng thú với cái nào nhất?</h3>
+            <label><input type="radio" name="q5" value="sec"> Bảo mật, tấn công & phòng thủ</label>
+            <label><input type="radio" name="q5" value="net"> Router, Network, Cloud</label>
+            <label><input type="radio" name="q5" value="se"> Code, UI, app features</label>
+          </div>
+
+          <!-- câu hỏi 6 -->
+          <div class="qbox">
+            <h3>6) Bạn muốn công việc tương lai thiên về gì?</h3>
+            <label><input type="radio" name="q6" value="se"> Sản phẩm (product) / phần mềm</label>
+            <label><input type="radio" name="q6" value="ai"> Dữ liệu / AI / phân tích</label>
+            <label><input type="radio" name="q6" value="net,sec"> Hạ tầng / bảo mật</label>
+          </div>
+
+          <!-- câu hỏi 7 -->
+          <div class="qbox">
+            <h3>7) Bạn thích kiểu tư duy nào hơn?</h3>
+            <label><input type="radio" name="q7" value="se"> Logic + xây dựng từng bước</label>
+            <label><input type="radio" name="q7" value="ai"> Suy luận + mô hình + thử nghiệm</label>
+            <label><input type="radio" name="q7" value="sec"> Cẩn thận + nghi ngờ + kiểm tra</label>
+          </div>
+
+          <!-- câu hỏi 8 -->
+          <div class="qbox">
+            <h3>8) Bạn có thích Linux / Terminal không?</h3>
+            <label><input type="radio" name="q8" value="sec,net"> Rất thích</label>
+            <label><input type="radio" name="q8" value="it"> Cũng ổn</label>
+            <label><input type="radio" name="q8" value="se"> Không quen / không thích</label>
+          </div>
+
+          <!-- câu hỏi 9 -->
+          <div class="qbox">
+            <h3>9) Bạn thích làm dự án nào hơn?</h3>
+            <label><input type="radio" name="q9" value="se"> Website/app có người dùng thật</label>
+            <label><input type="radio" name="q9" value="ai"> Dự đoán/nhận diện (AI)</label>
+            <label><input type="radio" name="q9" value="net"> Setup server / hệ thống</label>
+          </div>
+
+          <!-- câu hỏi 10 -->
+          <div class="qbox">
+            <h3>10) Bạn thích học kiểu nào hơn?</h3>
+            <label><input type="radio" name="q10" value="se"> Học nhanh để làm ra sản phẩm</label>
+            <label><input type="radio" name="q10" value="ai"> Học sâu toán + thuật toán</label>
+            <label><input type="radio" name="q10" value="net,sec"> Học hệ thống + thực chiến</label>
+          </div>
+
+          <!-- câu hỏi 11 -->
+          <div class="qbox">
+            <h3>11) Nếu gặp lỗi, bạn thường…</h3>
+            <label><input type="radio" name="q11" value="se"> Debug code tới khi chạy</label>
+            <label><input type="radio" name="q11" value="net"> Check cấu hình, logs, hệ thống</label>
+            <label><input type="radio" name="q11" value="sec"> Tìm nguyên nhân & “điểm yếu”</label>
+          </div>
+
+          <!-- câu hỏi 12 -->
+          <div class="qbox">
+            <h3>12) Bạn có thích làm việc theo quy trình (kế hoạch/đúng chuẩn) không?</h3>
+            <label><input type="radio" name="q12" value="it"> Rất thích</label>
+            <label><input type="radio" name="q12" value="se"> Bình thường</label>
+            <label><input type="radio" name="q12" value="ai,sec"> Không thích lắm</label>
+          </div>
+
+          <!-- câu hỏi 13 -->
+          <div class="qbox">
+            <h3>13) Bạn quan tâm nhất đến điều gì?</h3>
+            <label><input type="radio" name="q13" value="se"> Xây sản phẩm chạy ổn định</label>
+            <label><input type="radio" name="q13" value="ai"> Kết quả/độ chính xác của mô hình</label>
+            <label><input type="radio" name="q13" value="sec"> An toàn dữ liệu & bảo mật</label>
+          </div>
+
+          <!-- câu hỏi 14 -->
+          <div class="qbox">
+            <h3>14) Bạn thích làm việc với người khác theo vai trò nào?</h3>
+            <label><input type="radio" name="q14" value="se"> Dev trong team làm sản phẩm</label>
+            <label><input type="radio" name="q14" value="it"> Cầu nối giữa kỹ thuật và nhu cầu</label>
+            <label><input type="radio" name="q14" value="net,sec"> Hỗ trợ hệ thống/bảo mật</label>
+          </div>
+
+          <!-- câu hỏi 15 -->
+          <div class="qbox">
+            <h3>15) Bạn mong muốn công việc tương lai có tính chất nào?</h3>
+            <label><input type="radio" name="q15" value="se"> Sáng tạo, làm tính năng mới</label>
+            <label><input type="radio" name="q15" value="ai"> Nghiên cứu, thử nghiệm, cải tiến</label>
+            <label><input type="radio" name="q15" value="net,sec"> Ổn định, hệ thống, bảo vệ</label>
+          </div>
+
+          <div class="actions">
+            <button type="submit" class="btn">Xem kết quả</button>
+            <button type="button" id="resetBtn" class="btn btn-outline">Làm lại</button>
+          </div>
+        </form>
+
+        <footer class="footer">
+          <p>© SSA101 Group 2</p>
+        </footer>
+      </div>
+
+      <!-- RIGHT: STICKY DESCRIPTION + RESULT -->
+      <div class="rightCol">
+        <div class="stickyBox">
+          <p class="desc">
+            Trả lời các câu hỏi bên dưới để hệ thống gợi ý chuyên ngành phù hợp nhất với bạn.
+            <br>
+            <b>Lưu ý:</b> Không có đúng/sai — chỉ là mức độ phù hợp.
+          </p>
+
+          <div id="resultBox" class="result hidden">
+            <h2>Kết quả gợi ý</h2>
+            <p id="top1" class="top"></p>
+            <p id="top2" class="top2"></p>
+            <div id="explain" class="explain"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+<script src="script.js"></script>
 </body>
 </html>
