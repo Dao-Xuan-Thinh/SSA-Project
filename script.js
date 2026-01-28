@@ -152,16 +152,20 @@ function showToast() {
 
     const first = sorted[0];
     const second = sorted[1];
-
-    top1.innerHTML = `🥇 <b>Phù hợp nhất:</b> ${first.name} — <b>${first.score}</b> điểm`;
-    top2.innerHTML = `🥈 <b>Phù hợp thứ 2:</b> ${second.name} — <b>${second.score}</b> điểm`;
+    // RESET animation mỗi lần chạy lại quiz
+    resultBox.classList.add("hidden");
+    void resultBox.offsetWidth; // ép browser reset animation
+    resultBox.classList.remove("hidden");
+    top1.innerHTML = `
+    <span class="reveal delay-1">🥇 <b>Phù hợp nhất:</b> ${first.name} — <b>${first.score}</b> điểm</span>`;
+    top2.innerHTML = `<span class="reveal delay-2">🥈 <b>Phù hợp thứ 2:</b> ${second.name} — <b>${second.score}</b> điểm</span>`;
 
     explain.innerHTML = `
-      <div class="card">
+      <div class="card reveal delay-3">
         <h3>Vì sao bạn hợp với ${first.name}?</h3>
         <p>${first.desc}</p>
       </div>
-      <div class="card">
+      <div class="card reveal delay-3">
         <h3>Lựa chọn dự phòng: ${second.name}</h3>
         <p>${second.desc}</p>
       </div>
@@ -177,38 +181,39 @@ function showToast() {
   });
 
   //AI chatbot
-  async function askCareerAI() {
-  const question = document.getElementById("career-question").value;
-  const box = document.getElementById("career-answer");
+//   async function askCareerAI() {
+//   const question = document.getElementById("career-question").value;
+//   const box = document.getElementById("career-answer");
 
-  box.textContent = "AI đang trả lời...";
+//   box.textContent = "AI đang trả lời...";
 
-  const prompt = `
-Bạn là cố vấn hướng nghiệp CNTT tại Việt Nam.
-Câu hỏi của học sinh:
-"${question}"
+//   const prompt = `
+// Bạn là cố vấn hướng nghiệp CNTT tại Việt Nam.
+// Câu hỏi của học sinh:
+// "${question}"
 
-Hãy trả lời ngắn gọn, dễ hiểu, thực tế. Tất cả câu trả lời đều bằng tiếng Việt.
-`;
+// Hãy trả lời ngắn gọn, dễ hiểu, thực tế. Tất cả câu trả lời đều bằng tiếng Việt.
+// `;
 
-  try {
-    const res = await fetch("http://localhost:11434/api/generate", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "llama3:8b",
-        prompt,
-        stream: false
-      })
-    });
+//   try {
+//     const res = await fetch("http://localhost:11434/api/generate", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({
+//         model: "llama3:8b",
+//         prompt,
+//         stream: false
+//       })
+//     });
 
-    const data = await res.json();
-    box.textContent = data.response;
+//     const data = await res.json();
+//     box.textContent = data.response;
 
-  } catch {
-    box.textContent = "Không kết nối được AI.";
-  }
-}
+//   } catch {
+//     box.textContent = "Không kết nối được AI.";
+//   }
+// }
+// ===== NHẠC NỀN TỰ ĐỘNG =====
 const music = document.getElementById("bgMusic");
 
 function startMusicOnce() {

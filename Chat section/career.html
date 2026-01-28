@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI Chat</title>
+  <link rel="stylesheet" href="chat.css" />
+</head>
+<body>
+
+<div class="chat-app">
+  <!-- HEADER -->
+  <header class="chat-header">
+    <span>🤖 QuizAI</span>
+  </header>
+
+  <!-- CHAT CONTENT -->
+  <main class="chat-body" id="chatBody">
+    <div class="msg ai">
+      <div class="bubble">
+        Xin chào 👋 Tôi có thể giúp gì cho bạn?
+      </div>
+    </div>
+  </main>
+
+  <!-- INPUT -->
+  <footer class="chat-input">
+    <input id="userInput" type="text" placeholder="Nhập câu hỏi..." />
+    <button id="sendBtn">➤</button>
+  </footer>
+</div>
+<button id="themeToggle" class="theme-btn">🌙</button>
+
+<script src="chat.js"></script>
+</body>
+</html>
